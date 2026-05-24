@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeylonEscape | Premium Sri Lankan Travel & Adventures</title>
+    <meta name="description" content="Experience the breathtaking beauty of Sri Lanka with CeylonEscape. Book handpicked luxury villas, high-mountain train rides, surfing tours, and wildlife safaris.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header" id="mainHeader">
+        <div class="container navbar-container">
+            <a href="#" class="logo" id="siteLogo">
+                <span class="logo-accent">Ceylon</span>Escape
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#destinations" class="nav-link">Destinations</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#newsletter" class="nav-link">Subscribe</a>
+                <a href="#booking-modal" class="btn btn-secondary mobile-only-btn open-modal-btn">Book Adventure</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#booking-modal" class="btn btn-primary open-modal-btn desktop-only-btn">Book Adventure</a>
+                <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-tagline fade-in-el">Unveil the Wonders of the Indian Ocean</span>
+                    <h1 class="hero-title fade-in-el delay-1">Escape into the Beauty of <span class="highlight-text">Ceylon</span></h1>
+                    <p class="hero-description fade-in-el delay-2">
+                        Embark on an unforgettable journey through misty emerald mountains, pristine gold-sand shores, ancient cities steeped in history, and wild sanctuaries.
+                    </p>
+                    <div class="hero-cta fade-in-el delay-3">
+                        <a href="#destinations" class="btn btn-primary btn-large">Explore Destinations</a>
+                        <a href="#why-us" class="btn btn-outline btn-large">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Floating Booking Widget -->
+                <div class="booking-widget fade-in-el delay-4">
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-group">
+                            <label for="destination"><i class="fa-solid fa-map-location-dot"></i> Destination</label>
+                            <select id="destination" required>
+                                <option value="" disabled selected>Where to go?</option>
+                                <option value="ella">Ella - Mountain Tea Trails</option>
+                                <option value="sigiriya">Sigiriya - Ancient Lion Rock</option>
+                                <option value="mirissa">Mirissa - Beach & Whale Watching</option>
+                                <option value="yala">Yala - Wilderness & Safaris</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date-start"><i class="fa-regular fa-calendar-days"></i> Check In</label>
+                            <input type="date" id="date-start" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests"><i class="fa-solid fa-user-group"></i> Guests</label>
+                            <select id="guests">
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group btn-group">
+                            <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Destinations Section -->
+        <section class="destinations-section" id="destinations">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Exquisite Handpicked Escapes</span>
+                    <h2 class="section-title">Popular Destinations</h2>
+                    <div class="accent-line"></div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="filters-container">
+                    <button class="filter-btn active" data-filter="all">All Places</button>
+                    <button class="filter-btn" data-filter="hill">Hill Country</button>
+                    <button class="filter-btn" data-filter="cultural">Cultural & Wild</button>
+                    <button class="filter-btn" data-filter="beach">Beaches</button>
+                </div>
+
+                <!-- Destinations Grid -->
+                <div class="destinations-grid" id="destinationsGrid">
+                    
+                    <!-- Card 1: Ella -->
+                    <div class="destination-card" data-category="hill">
+                        <div class="card-image-wrapper">
+                            <img src="images/hero_ella.png" alt="Nine Arch Bridge Ella" class="card-image" loading="lazy">
+                            <span class="card-badge bg-hot">Trending</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 3 Days / 4 Nights</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <h3 class="card-title">Ella Highlands Train & Tea Trails</h3>
+                            <p class="card-text">Ride the famous colonial blue/red train through lush misty tea plantations, hike up Mini Adams Peak, and sleep in sky cottages.</p>
+                            <div class="card-footer">
+                                <div class="price-box">
+                                    <span class="price-label">Starting from</span>
+                                    <span class="price-value">$199<small>/person</small></span>
+                                </div>
+                                <button class="btn btn-outline btn-sm open-booking-details" data-place="Ella Highlands Tour">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Sigiriya -->
+                    <div class="destination-card" data-category="cultural">
+                        <div class="card-image-wrapper">
+                            <img src="images/sigiriya.png" alt="Sigiriya Fortress" class="card-image" loading="lazy">
+                            <span class="card-badge bg-cultural">Heritage</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 2 Days / 3 Nights</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <h3 class="card-title">Sigiriya Fortress & Ancient Cities</h3>
+                            <p class="card-text">Climb the legendary 8th wonder of the world: Sigiriya Lion Rock, walk through royal gardens, and see the ancient frescoes.</p>
+                            <div class="card-footer">
+                                <div class="price-box">
+                                    <span class="price-label">Starting from</span>
+                                    <span class="price-value">$149<small>/person</small></span>
+                                </div>
+                                <button class="btn btn-outline btn-sm open-booking-details" data-place="Sigiriya Fortress Tour">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Mirissa -->
+                    <div class="destination-card" data-category="beach">
+                        <div class="card-image-wrapper">
+                            <img src="images/mirissa.png" alt="Mirissa beach Sri Lanka" class="card-image" loading="lazy">
+                            <span class="card-badge bg-beach">Relax</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 4 Days / 5 Nights</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                            </div>
+                            <h3 class="card-title">Mirissa Tropical Surf & Surf Bliss</h3>
+                            <p class="card-text">Bathe in gold sunlight, surf crystal blue reef breaks, sip fresh coconut, and sail into the sunset to view majestic blue whales.</p>
+                            <div class="card-footer">
+                                <div class="price-box">
+                                    <span class="price-label">Starting from</span>
+                                    <span class="price-value">$249<small>/person</small></span>
+                                </div>
+                                <button class="btn btn-outline btn-sm open-booking-details" data-place="Mirissa Surf & Beach Tour">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Yala -->
+                    <div class="destination-card" data-category="cultural">
+                        <div class="card-image-wrapper">
+                            <img src="images/yala.png" alt="Yala National Park Elephant Leopard" class="card-image" loading="lazy">
+                            <span class="card-badge bg-wild">Adventure</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 3 Days / 2 Nights</span>
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <h3 class="card-title">Yala Wilderness & Wildlife Safari</h3>
+                            <p class="card-text">Embark on high-end 4x4 open safaris. Capture close glimpses of roaring leopards, elephant herds, and beautiful exotic birds.</p>
+                            <div class="card-footer">
+                                <div class="price-box">
+                                    <span class="price-label">Starting from</span>
+                                    <span class="price-value">$179<small>/person</small></span>
+                                </div>
+                                <button class="btn btn-outline btn-sm open-booking-details" data-place="Yala Wildlife Safari">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Features Highlight -->
+        <section class="why-us-section" id="why-us">
+            <div class="container">
+                <div class="why-us-wrapper">
+                    <div class="why-us-content">
+                        <span class="section-subtitle">Exemplary Craftsmanship in Travel</span>
+                        <h2 class="section-title">Why Travel With CeylonEscape?</h2>
+                        <p class="why-us-description">
+                            We pride ourselves in designing immersive journeys that go beyond the average tour guide. With local roots and global standards, we provide access to Sri Lanka's hidden spots in ultimate style and comfort.
+                        </p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item-row">
+                                <div class="feature-icon-box">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <div class="feature-text-box">
+                                    <h4>Curated Local Guides</h4>
+                                    <p>Our guides are passionate local historians and survivalists who know every secret track.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item-row">
+                                <div class="feature-icon-box">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div class="feature-text-box">
+                                    <h4>Seamless Premium Safety</h4>
+                                    <p>We provide full-insurance packages, reliable private transportation, and 24/7 backup.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item-row">
+                                <div class="feature-icon-box">
+                                    <i class="fa-solid fa-spa"></i>
+                                </div>
+                                <div class="feature-text-box">
+                                    <h4>Bespoke Luxury & Wellness</h4>
+                                    <p>We blend adventure with relaxation, housing you in handpicked, sustainable luxury resorts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Stat Card collage -->
+                    <div class="why-us-collage">
+                        <div class="stat-card stat-card-1 floating-anim">
+                            <span class="stat-num">12k+</span>
+                            <span class="stat-desc">Happy Explorers</span>
+                        </div>
+                        <div class="stat-card stat-card-2 floating-anim delay-2">
+                            <span class="stat-num">99%</span>
+                            <span class="stat-desc">Satisfaction Rate</span>
+                        </div>
+                        <div class="stat-card stat-card-3 floating-anim delay-1">
+                            <span class="stat-num">15+</span>
+                            <span class="stat-desc">Years of Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Real Journeys, Real Stories</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "Our trip to Ella and Mirissa was completely magical. CeylonEscape curated everything perfectly—from the private carriage on the mountain train to the boutique beach villa in Mirissa. Simply outstanding!"
+                        </p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar bg-avatar-1">EA</div>
+                            <div class="user-info">
+                                <h4>Emma & Arthur</h4>
+                                <span>Travel Bloggers, London</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "Climbing Sigiriya with our local guide Kusal was a highlight. His deep historical knowledge and absolute care for our safety made us feel incredibly looked after. Booking was simple, transparent, and seamless."
+                        </p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar bg-avatar-2">MR</div>
+                            <div class="user-info">
+                                <h4>Mateo Rodriguez</h4>
+                                <span>Photographer, Barcelona</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" id="newsletter">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-content">
+                        <h3>Unlock Secret Itineraries</h3>
+                        <p>Subscribe to our seasonal journal for travel guides, secret spots, and exclusive early-bird luxury discounts.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address" required aria-label="Email address" id="newsletterEmail">
+                            <button type="submit" class="btn btn-secondary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo"><span class="logo-accent">Ceylon</span>Escape</a>
+                <p class="footer-desc">
+                    Designing sustainable, breathtaking, and customized travel adventures across the wonders of Sri Lanka since 2011.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#why-us">Why Travel With Us</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Popular Tours</h4>
+                <ul class="footer-links">
+                    <li><a href="#destinations">Ella Tea Trails</a></li>
+                    <li><a href="#destinations">Sigiriya Ancient Climb</a></li>
+                    <li><a href="#destinations">Mirissa Surf Safari</a></li>
+                    <li><a href="#destinations">Yala Leopard Safari</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-location-dot"></i> 45 Galle Road, Colombo 03, Sri Lanka</li>
+                    <li><i class="fa-solid fa-phone"></i> +94 (11) 234-5678</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@ceylonescape.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CeylonEscape. All Rights Reserved. Crafted for unforgettable journeys.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking / Detail Modal Dialog -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeModalBtn" aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <h3>Request Custom Travel Itinerary</h3>
+                <p>Provide your details, and our local travel designer will email you a custom crafted package within 24 hours.</p>
+            </div>
+            <form class="modal-form" id="modalBookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modal-name">Full Name</label>
+                        <input type="text" id="modal-name" required placeholder="e.g. John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-email">Email Address</label>
+                        <input type="email" id="modal-email" required placeholder="e.g. john@example.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modal-dest">Chosen Destination</label>
+                        <input type="text" id="modal-dest" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-date">Target Travel Date</label>
+                        <input type="date" id="modal-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="modal-notes">Additional Requests / Preferences</label>
+                    <textarea id="modal-notes" rows="3" placeholder="Tell us about your dream trip (e.g. dietary restrictions, luxury level, interest in hikes or beaches)"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Travel Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div class="toast" id="successToast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4 id="toastTitle">Success!</h4>
+                <p id="toastBody">Your request has been successfully submitted.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="app.js"></script>
+</body>
+</html>
